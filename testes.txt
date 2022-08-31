@@ -1,0 +1,130 @@
+//*[@id="shopify-section-collection-template"]/div/div/div[2]/div[2]/div
+
+#shopify-section-collection-template > div > div > div.collection_wrapper > div.collection_main > div
+
+/html/body/div[7]/main/div/div/div/div[2]/div[2]/div
+
+
+<div class="collection-grid__product grid__cell 1/2--handheld-and-up 1/3--desk filter_brand-hot-wheels-collectors">
+<div class="product-item product-item--push">
+  <input type="hidden" value="GXJ19" class="item_sku">
+<!---->
+  <figure class="product-item__image-container">
+    <a href="/collections/hot-wheels-collectors/products/rlc-exclusive-1952-dodge-power-wagon-gxj19" class="product-item__link">
+    <input type="hidden" name="productId" id="productId" value="6950064586957">
+  	<input type="hidden" value="GXJ19" id="prodSku" class="item_sku">
+    <input type="hidden" value="$35.00" id="product-price">
+      <input type="hidden" value="$35.00" class="originalprice">
+  	<input type="hidden" value="$0.00" id="discount-amount">
+  	<input type="hidden" name="productType" id="productType" value="">
+  	<input type="hidden" name="productTitle" id="productTitle" value="RLC Exclusive 1952 Dodge Power Wagon">
+  	<input type="hidden" name="productVendor" id="productVendor" value="Hot Wheels Collectors">
+  	<input type="hidden" name="productIndex" id="productIndex" value="1">
+    <input type="hidden" value="in-stock" id="product-availability"><div class="product-item__image-wrapper" style="max-width: 100%;">
+        <div class="aspect-ratio" style="padding-bottom: 100%;">
+          <img class="product-item__image product-item__image--fill  image--fade-in lazyautosizes lazyloaded" data-sizes="auto" data-widths="[200,300,400,600,800,900,1000,1200]" alt="RLC Exclusive 1952 Dodge Power Wagon" data-srcset="//cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_200x.jpg?v=1648784408 200w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_300x.jpg?v=1648784408 300w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_400x.jpg?v=1648784408 400w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_600x.jpg?v=1648784408 600w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_800x.jpg?v=1648784408 800w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_900x.jpg?v=1648784408 900w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_1000x.jpg?v=1648784408 1000w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_1200x.jpg?v=1648784408 1200w" sizes="306px" srcset="//cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_200x.jpg?v=1648784408 200w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_300x.jpg?v=1648784408 300w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_400x.jpg?v=1648784408 400w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_600x.jpg?v=1648784408 600w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_800x.jpg?v=1648784408 800w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_900x.jpg?v=1648784408 900w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_1000x.jpg?v=1648784408 1000w, //cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_1200x.jpg?v=1648784408 1200w">
+          <noscript>
+            <img class="product-item__image product-item__image--fill "
+                 src="//cdn.shopify.com/s/files/1/0568/1132/3597/products/GXJ19_W_22_1952_DPW_446_1500x1500_e5b0a536-9162-401f-af48-66e2783f4525_800x.jpg?v=1648784408">
+          </noscript>
+        </div>
+      </div>
+    </a>
+  </figure>
+  <div class="product-item__info align-left">
+    <input type="hidden" value="GXJ19" class="item_sku">
+      <p class="p medium product-item__vendor bold">Hot Wheels Collectors
+      </p><p class="product-item__title medium align-left">
+      <a href="/collections/hot-wheels-collectors/products/rlc-exclusive-1952-dodge-power-wagon-gxj19" class="link redirection-link product-title-mobile">RLC Exclusive 1952 Dodge Power Wagon</a>
+       <a href="/collections/hot-wheels-collectors/products/rlc-exclusive-1952-dodge-power-wagon-gxj19" class="link redirection-link product-title-desktop">RLC Exclusive 1952 Dodge Power Wagon</a>
+    </p>
+    <p class="product-item__price medium align-left " data-money-convertible="">$35.00</p><p class="product-item__pre_order medium align-left bold color-gray product-item__pre_order_1" style="color:#7B7B7B" hidden=""></p>
+    <script>
+      preOrderElement = document.querySelector('.product-item__pre_order_1');
+    </script>
+</div>
+</div></div>
+
+
+ 
+
+    json_string = json.dumps(data)
+    writeJSon(jsonString=json_string)
+
+    readedJson = readJson()
+    print("Readed: ",readedJson)
+
+
+    # driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
+# driver.get('https://creations.mattel.com/collections/hot-wheels-collectors')
+# # driver.get('https://creations.mattel.com/collections/all')
+
+# print(driver.title)
+# print(driver.current_url)
+
+# collection_itens = driver.find_element(By.CLASS_NAME, "collection_main")
+
+# all_itens = collection_itens.find_elements(By.CLASS_NAME, "product-item")
+
+# i = 0
+# for item in all_itens:
+#     i+=1
+#     productName = item.find_element(By.ID, "productTitle").get_attribute("value")
+#     productSkul = item.find_element(By.ID, "prodSku").get_attribute("value")
+#     productPrice = item.find_element(By.ID, "product-price").get_attribute("value")
+#     print("Item %d: %s | SKUL: %s | Price: %s" % (i, productName, productSkul, productPrice))
+
+
+
+
+# #driver.save_screenshot('screenshot.png')
+
+# driver.quit()
+
+  # readedJson = readJson()
+    # print(len(readedJson['employees']))
+    # print(driver.title)
+    # print(driver.current_url)
+
+   
+
+    # json_string = json.dumps(list)
+    # print(json_string)
+    # writeJSon(json_string)
+
+
+       # readedJson = readJson()
+    # print(len(readedJson['employees']))
+    # print(driver.title)
+    # print(driver.current_url)
+
+   
+
+    # json_string = json.dumps(list)
+    # print(json_string)
+    # writeJSon(json_string)
+
+
+    # start = dt.datetime.now()
+    # myPeriodicFunction()
+    # end = dt.datetime.now()
+    # exec_time = end - start
+
+
+
+    # JsonParser.updateJsonData(webItensList)
+    # print(Crawler.getDictItensSkull())
+    # print(CheckUtils.hasNewProduct(webItensList,jsonItensList))
+    
+    # for item in webItensList:
+    #     print(item)
+    #     print(webItensList[item])
+
+    # print(jsonItensList[0])
+    
+    # print(webItensList)
+
+
+    out-of-stock
+
+    in-stock
