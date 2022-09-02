@@ -3,14 +3,16 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from enum import Enum
 
-DRIVER_PATH = '/usr/lib/chromium-browser/chromedriver'
+# DRIVER_PATH = '/usr/lib/chromium-browser/chromedriver'
+DRIVER_PATH = '/Users/leonardo/Desktop/MattelCrawler/chromedriver'
+
 mattelPath = {'HotWheels': 'https://creations.mattel.com/collections/hot-wheels-collectors', 'MattelCreations': 'https://creations.mattel.com/collections/mattel-creations' ,'AllMattel': 'https://creations.mattel.com/collections/all'}
 
 options = Options()
 options.headless = True
 options.add_argument("--window-size=1920,1200")
 
-itensList = {}
+
 
 class MattelPath(Enum):
     HotWheels = 'HotWheels'
@@ -20,6 +22,8 @@ class MattelPath(Enum):
 def getListItemsWeb(path):
     print("Get List of Itens from Web Page")
 
+    itensList = {}
+    
     driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
     driver.get(mattelPath[MattelPath(path).value])
 

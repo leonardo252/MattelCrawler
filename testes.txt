@@ -128,3 +128,23 @@
     out-of-stock
 
     in-stock
+
+        # hw = sched.scheduler(time.time, time.sleep)
+    # hw.enter(interval, 1, hotWheelsCollectors, (hw,))
+    # hw.run()
+
+    #mc = sched.scheduler(time.time, time.sleep)
+    #mc.enter(otherInterval, 1, mattelCreationsCollectors, (mc,))
+    #mc.run()
+
+    #hw_c = ThrHW(interval)
+    #mc = ThrMC(otherInterval)
+    #hw_c.start()
+    #mc.start()
+    #hw.run()
+
+
+            # schd = sched.scheduler(time.time, time.sleep)
+        # schd.enter(interval, 1, run_threaded, (hotWheelsCollectors,))
+        # schd.enter(otherInterval, 1, run_threaded, (mattelCreationsCollectors,))
+        # schd.run()

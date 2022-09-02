@@ -1,6 +1,6 @@
 import telegram_send
 
-def sendMenssage(addedItems, removedItems):
+def sendItemsChanged(addedItems, removedItems):
 
     if (len(addedItems) > 0):
 
@@ -18,4 +18,5 @@ def sendMenssage(addedItems, removedItems):
     else:
         print("Zero Removed Items")
 
-    
+def sendManssage(messages):
+    telegram_send.send(messages=[messages])

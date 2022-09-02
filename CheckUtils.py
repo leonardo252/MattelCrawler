@@ -3,7 +3,7 @@ def compareItemsQuantity(listWeb, listJson):
     print("Comparing sizes of lists. ListWeb: %d - ListJSon: %d" % (len(listWeb), len(listJson)))
 
 def compareItems(listWeb, listJson):
-    print("Compair lists")
+    # print("Compair lists")
 
     newItems = {}
     removedItems = {}

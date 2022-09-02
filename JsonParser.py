@@ -10,20 +10,20 @@ FILENAMEMC = 'AllMattelCreations.json'
     # json_string = json.dumps(data)
 
 
-def updateJsonData(listItens):
+def updateHotWheelsJson(listItens):
     jsonString = json.dumps(listItens)
     __writeJSon(jsonString, FILENAMEHW)
 
-def getListJson():
-    print("Get List of Itens from Hot Wheels JSon")
+def getAllHotWheelsJson():
+    # print("Get List of Itens from Hot Wheels JSon")
     return __readJson(FILENAMEHW)
 
 def updateAllMattelJson(listItens):
     jsonString = json.dumps(listItens)
-    __writeJson(jsonString, FILENAMEMC)
+    __writeJSon(jsonString, FILENAMEMC)
 
 def getAllMattelJson():
-    print("Get List of Itens from Mattel Creations JSon")
+    # print("Get List of Itens from Mattel Creations JSon")
     return __readJson(FILENAMEMC)
 
 def __writeJSon(jsonString, fileName):
@@ -32,7 +32,7 @@ def __writeJSon(jsonString, fileName):
         with open(fileName, 'w') as outfile:
             outfile.write(jsonString)
     except:
-        print("Problem to read JSON")
+        print("Problem to write JSON")
 
 def __readJson(fileName):
 
@@ -42,4 +42,5 @@ def __readJson(fileName):
             return data
 
     except:
+        print("Problem to read JSON")
         return []

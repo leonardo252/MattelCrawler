@@ -1,3 +1,4 @@
+from email import message
 import JsonParser
 import Crawler
 import CheckUtils
@@ -5,34 +6,33 @@ import threading
 from threading import Thread
 import TelegramMenssager
 import datetime as dt
-import sched
+import schedule
 import time
 
-interval = 60
-otherInterval = 80
 
-def hotWheelsCollectors(sched):
+intervalHW = 60
+intervalMC = 90
+intervalSill = 1
 
-    print("Searching Hot Wheels")
+def hotWheelsCollectors():
+    print("\nSearching Hot Wheels Collectors")
     webItensList = Crawler.getListItemsWeb(Crawler.MattelPath.HotWheels)
-    jsonItensList = JsonParser.getListJson()
+    jsonItensList = JsonParser.getAllHotWheelsJson()
 
     CheckUtils.compareItemsQuantity(webItensList, jsonItensList)
 
     addedItems, removedItems = CheckUtils.compareItems(webItensList, jsonItensList)
 
     if (len(addedItems) > 0 or len(removedItems) > 0):
-        TelegramMenssager.sendMenssage(addedItems, removedItems)
+        TelegramMenssager.sendItemsChanged(addedItems, removedItems)
 
-        JsonParser.updateJsonData(webItensList)
+        JsonParser.updateHotWheelsJson(webItensList)
     else:
-        print("Noting Changed")
+        print("Nothing new to Hot Wheels Collectors")
 
-    sched.enter(interval, 1, hotWheelsCollectors, (sched,))
 
-def mattelCreationsCollectors(sched):
-
-    print("Searching All Mattel Creations")
+def mattelCreationsCollectors():
+    print("\nSearching All Mattel Creations")
     webItensList = Crawler.getListItemsWeb(Crawler.MattelPath.AllMattel)
     jsonItensList = JsonParser.getAllMattelJson()
 
@@ -41,50 +41,33 @@ def mattelCreationsCollectors(sched):
     addedItems, removedItems = CheckUtils.compareItems(webItensList, jsonItensList)
 
     if (len(addedItems) > 0 or len(removedItems) > 0):
-        TelegramMenssager.sendMenssage(addedItems, removedItems)
+        TelegramMenssager.sendItemsChanged(addedItems, removedItems)
 
         JsonParser.updateAllMattelJson(webItensList)
     else:
-        print("Noting Changed")
-
-    sched.enter(interval, 1, mattelCreationsCollectors, (sched,))
-
-class ThrHW(Thread):
-    def __init__(self, interval):
-        Thread.__init__(self)
-        self.interval = interval
-
-    def run(self):
-        hw = sched.scheduler(time.time, time.sleep)
-        hw.enter(60, 1, hotWheelsCollectors, (hw,))
-        hw.run()
-
-class ThrMC(Thread):
-    def __init__(self, interval):
-        Thread.__init__(self)
-        self.interval = interval
-
-    def run(self):
-        mc = sched.scheduler(time.time, time.sleep)
-        mc.enter(80, 1, mattelCreationsCollectors, (mc,))
-        mc.run()
+        print("Nothing new to Mattel Creations")
 
 
+def stillRunning():
+    messages = "🤖 🛠️ ROBÔ TRABALHANDO  🛠️ 🤖"
+
+    TelegramMenssager.sendManssage(messages)
+
+def run_threaded(job_fn):
+  job_thread = threading.Thread(target=job_fn)
+  job_thread.start()
 
 def main():
-    hw = sched.scheduler(time.time, time.sleep)
-    hw.enter(interval, 1, hotWheelsCollectors, (hw,))
-    hw.run()
 
-    #mc = sched.scheduler(time.time, time.sleep)
-    #mc.enter(otherInterval, 1, mattelCreationsCollectors, (mc,))
-    #mc.run()
+    schedule.every().hour.at(":27").do(run_threaded, stillRunning)
+    schedule.every(intervalHW).seconds.do(run_threaded, hotWheelsCollectors)
+    schedule.every(intervalMC).seconds.do(run_threaded, mattelCreationsCollectors)
 
-    #hw_c = ThrHW(interval)
-    #mc = ThrMC(otherInterval)
-    #hw_c.start()
-    #mc.start()
-    #hw.run()
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+
+
 
 if __name__ == "__main__":
     main()
