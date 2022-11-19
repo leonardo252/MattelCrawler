@@ -9,6 +9,7 @@ import datetime as dt
 import schedule
 import time
 
+# pip install webdriver-manager
 
 intervalHW = 60
 intervalMC = 90
@@ -70,4 +71,18 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+
+    # webItensList = Crawler.getListItemsWeb(Crawler.MattelPath.HotWheels)
+    # print(webItensList)
+
+    # JsonParser.read(webItensList)
+
+    # print(JsonParser.getAllHotWheelsJson())
+    
+    hotWheelsCollectors()
+    
+    # Crawler.getCookies()
+
+    # Crawler.loadCookies()
+

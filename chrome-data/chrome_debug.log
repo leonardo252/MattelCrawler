@@ -1,0 +1,6 @@
+[14402:259:1119/193412.444404:WARNING:CONSOLE(1)] "Unrecognized feature: '
+'.", source: chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js (1)
+[14402:259:1119/193414.249962:INFO:CONSOLE(1)] "[object Object]", source:  (1)
+[14402:259:1119/193415.960296:INFO:CONSOLE(1)] "Valid checkout form not found", source: https://static.cdn.printful.com/static/js/external/shopify-product-customizer.js?v=0.25&shop=prod-collectorshub.myshopify.com (1)
+[14402:259:1119/193417.427728:INFO:CONSOLE(11)] "JQMIGRATE: Migrate is installed, version 3.3.2", source: https://blueconic.mattel.com/plugin/library/a847e3a0f10b1dc8d9079f79de29d320 (11)
+[14402:259:1119/193432.500689:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

@@ -8,16 +8,25 @@ def compareItems(listWeb, listJson):
     newItems = {}
     removedItems = {}
 
-    for jsonItem in listJson:
-        try:
-            alreadyHas = listWeb[jsonItem]
-        except:
-            removedItems[jsonItem] = {"name": listJson[jsonItem]["name"], "price": listJson[jsonItem]["price"], "situation": listJson[jsonItem]["situation"], "link": listJson[jsonItem]["link"]}
 
     for webItem in listWeb:
-        try:
-            nowHas = listJson[webItem]
-        except:
-            newItems[webItem] = {"name": listWeb[webItem]["name"], "price": listWeb[webItem]["price"], "situation": listWeb[webItem]["situation"], "link": listWeb[webItem]["link"]}
+        if listWeb[webItem]["situation"] == "Available":
+            try:
+                alreadyHas = listJson[webItem]
+                if listJson[webItem]["situation"] == "Sold Out":
+                    newItems[webItem] = {"name": listWeb[webItem]["name"], "price": listWeb[webItem]["price"], "situation": listWeb[webItem]["situation"], "link": listWeb[webItem]["link"]}
+  
+            except:
+                newItems[webItem] = {"name": listWeb[webItem]["name"], "price": listWeb[webItem]["price"], "situation": listWeb[webItem]["situation"], "link": listWeb[webItem]["link"]}
+
+        else:
+            try:
+                alreadyHas = listJson[webItem]
+                if listJson[webItem]["situation"] == "Available":
+                    removedItems[webItem] = {"name": listWeb[webItem]["name"], "price": listWeb[webItem]["price"], "situation": listWeb[webItem]["situation"], "link": listWeb[webItem]["link"]}
+  
+            except:
+                removedItems[webItem] = {"name": listWeb[webItem]["name"], "price": listWeb[webItem]["price"], "situation": listWeb[webItem]["situation"], "link": listWeb[webItem]["link"]}
+
 
     return (newItems, removedItems)
