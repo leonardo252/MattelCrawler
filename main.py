@@ -19,15 +19,17 @@ def hotWheelsCollectors():
     print("\nSearching Hot Wheels Collectors")
     webItensList = Crawler.getListItemsWeb(Crawler.MattelPath.HotWheels)
     jsonItensList = JsonParser.getAllHotWheelsJson()
+    onSales = JsonParser.getAllOnSales()
 
     CheckUtils.compareItemsQuantity(webItensList, jsonItensList)
 
-    addedItems, removedItems = CheckUtils.compareItems(webItensList, jsonItensList)
+    addedItems, removedItems, newOnSales = CheckUtils.compareItems(webItensList, jsonItensList, onSales)
 
-    if (len(addedItems) > 0 or len(removedItems) > 0):
-        TelegramMenssager.sendItemsChanged(addedItems, removedItems)
+    if (len(addedItems) > 0 or len(removedItems) > 0 or len(newOnSales) > 0):
+        TelegramMenssager.sendItemsChanged(addedItems, removedItems, newOnSales)
 
         JsonParser.updateHotWheelsJson(webItensList)
+        JsonParser.updateOnSales(newOnSales)
     else:
         print("Nothing new to Hot Wheels Collectors")
 

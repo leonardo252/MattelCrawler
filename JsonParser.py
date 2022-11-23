@@ -2,6 +2,7 @@ import json
 
 FILENAMEHW = 'HotWheelsHistory.json'
 FILENAMEMC = 'AllMattelCreations.json'
+FILENAMESALES = 'OnSalesItens.json'
 
     # Ele dá um dump direto, formatado pra strings no python
     # with open('json_data1.json', 'w') as outfile:
@@ -10,6 +11,14 @@ FILENAMEMC = 'AllMattelCreations.json'
     # json_string = json.dumps(data)
 
 
+def updateOnSales(listItens):
+    jsonString = json.dumps(listItens)
+    __writeJSon(jsonString, FILENAMESALES)
+
+def getAllOnSales():
+    # print("Get List of Itens from Hot Wheels JSon")
+    return __readJson(FILENAMESALES)
+    
 def updateHotWheelsJson(listItens):
     jsonString = json.dumps(listItens)
     __writeJSon(jsonString, FILENAMEHW)

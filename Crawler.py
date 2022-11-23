@@ -34,19 +34,26 @@ def getListItemsWeb(path):
 
     time.sleep(5)
 
-    collection_itens = driver.find_element(By.CLASS_NAME, "collection-grid__container")
+    collection_itens = driver.find_element(By.CLASS_NAME, "collection-grid__product-items")
     all_itens = collection_itens.find_elements(By.CLASS_NAME, "collection-grid__product")
 
     for item in all_itens:
+        onSale = False
         productName = item.find_element(By.CLASS_NAME, "collection-grid__product-name").text
-        productPrice = item.find_element(By.CLASS_NAME, "collection-grid__product-price").text
+        productPriceWrapper = item.find_element(By.CLASS_NAME, "collection-grid__product-price-wrapper")
+        try:
+            productPrice = productPriceWrapper.find_element(By.CLASS_NAME, "collection-grid__product-price").text
+        except:
+            productPrice = productPriceWrapper.find_element(By.CLASS_NAME, "collection-grid__product-price--sale").text
+            onSale = True
+
         productLink = item.find_element(By.CLASS_NAME, "pi__link").get_attribute("href")
         try: 
             productSituation = item.find_element(By.CLASS_NAME, "collection-grid__product-description-badge").text
         except:
             productSituation = "Available"
         
-        itensList[productName] = {"name": productName, "price": productPrice, "situation": productSituation, "link": productLink}
+        itensList[productName] = {"name": productName, "price": productPrice, "situation": productSituation, "link": productLink, "onSale": onSale}
 
     driver.quit()
     return itensList
