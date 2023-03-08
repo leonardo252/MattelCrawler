@@ -32,7 +32,7 @@ def getListItemsWeb(path):
     # driver.implicitly_wait(1)
     driver.get(mattelPath[MattelPath(path).value])
 
-    time.sleep(5)
+    time.sleep(3)
 
     collection_itens = driver.find_element(By.CLASS_NAME, "collection-grid__product-items")
     all_itens = collection_itens.find_elements(By.CLASS_NAME, "collection-grid__product")
@@ -50,6 +50,7 @@ def getListItemsWeb(path):
         productLink = item.find_element(By.CLASS_NAME, "pi__link").get_attribute("href")
         try: 
             productSituation = item.find_element(By.CLASS_NAME, "collection-grid__product-description-badge").text
+            continue
         except:
             productSituation = "Available"
         

@@ -2,7 +2,7 @@
 def compareItemsQuantity(listWeb, listJson):
     print("Comparing sizes of lists. ListWeb: %d - ListJSon: %d" % (len(listWeb), len(listJson)))
 
-def compareItems(listWeb, listJson, listOnSales):
+def compareItems(listWeb, listJson):
     # print("Compair lists")
 
     newItems = {}
@@ -13,7 +13,7 @@ def compareItems(listWeb, listJson, listOnSales):
         if listWeb[webItem]["situation"] == "Available":
             if listWeb[webItem]["onSale"] == True:
                 try:
-                    hasOnSale = listOnSales[webItem]
+                    hasOnSale = []
                 except:
                     onSales[webItem] = {"name": listWeb[webItem]["name"], "price": listWeb[webItem]["price"], "situation": listWeb[webItem]["situation"], "link": listWeb[webItem]["link"], "onSale": listWeb[webItem]["onSale"]}
             else:
