@@ -1,16 +1,3 @@
-2023/03/08-00:04:35.745 8103 Reusing MANIFEST /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/MANIFEST-000001
-2023/03/08-00:04:35.745 8103 Recovering log #14
-2023/03/08-00:04:35.747 8103 Level-0 table #16: started
-2023/03/08-00:04:35.787 8103 Level-0 table #16: 12013 bytes OK
-2023/03/08-00:04:35.787 8103 Recovering log #16
-2023/03/08-00:04:35.788 8103 Reusing old log /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/000016.log 
-2023/03/08-00:04:35.831 8103 Delete type=0 #14
-2023/03/08-00:04:35.831 8103 Delete type=2 #17
-2023/03/08-00:04:35.838 8103 Compacting 4@0 + 0@1 files
-2023/03/08-00:04:35.864 8103 Generated table #17@0: 445 keys, 9212 bytes
-2023/03/08-00:04:35.864 8103 Compacted 4@0 + 0@1 files => 9212 bytes
-2023/03/08-00:04:35.904 8103 compacted to: files[ 0 1 1 0 0 0 0 ]
-2023/03/08-00:04:35.906 8103 Delete type=2 #16
-2023/03/08-00:04:35.906 8103 Delete type=2 #7
-2023/03/08-00:04:35.906 8103 Delete type=2 #13
-2023/03/08-00:04:35.906 8103 Delete type=2 #10
+2023/03/08-20:30:23.655 8503 Reusing MANIFEST /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/MANIFEST-000001
+2023/03/08-20:30:23.656 8503 Recovering log #16
+2023/03/08-20:30:23.657 8503 Reusing old log /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/000016.log 

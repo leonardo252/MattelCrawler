@@ -1,5 +1,3 @@
-2023/03/08-00:03:24.215 6f07 Reusing MANIFEST /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/MANIFEST-000001
-2023/03/08-00:03:24.217 6f07 Recovering log #14
-2023/03/08-00:03:24.219 6f07 Reusing old log /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/000014.log 
-2023/03/08-00:03:45.330 9603 Level-0 table #17: started
-2023/03/08-00:03:45.368 9603 Level-0 table #17: 12013 bytes OK
+2023/03/08-20:29:29.201 6d07 Reusing MANIFEST /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/MANIFEST-000001
+2023/03/08-20:29:29.203 6d07 Recovering log #16
+2023/03/08-20:29:29.204 6d07 Reusing old log /Users/leonardo/Desktop/MattelCrawler/chrome-data/Default/Local Storage/leveldb/000016.log 

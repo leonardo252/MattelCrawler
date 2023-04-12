@@ -27,7 +27,7 @@ def getListItemsWeb(path):
     chrome_options = Options()
     chrome_options.headless = True
     chrome_options.add_argument("--user-data-dir=chrome-data")
-    # chrome_options.add_argument("--window-size=1920,1200")
+    chrome_options.add_argument("--window-size=1920,1200")
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     # driver.implicitly_wait(1)
     driver.get(mattelPath[MattelPath(path).value])
